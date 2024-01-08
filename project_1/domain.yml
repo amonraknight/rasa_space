@@ -8,6 +8,7 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - create_processor
 
 responses:
   utter_greet:
@@ -28,7 +29,21 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+  
+  utter_confirm:
+  - text: "OK."
+
+entities:
+  - nifi_processor
 
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+  
+slots:
+  nifi_processor_name: 
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: nifi_processor

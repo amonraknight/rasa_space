@@ -28,3 +28,8 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: ask_to_create_processor
+  steps:
+  - intent: create_processor
+  - action: utter_confirm

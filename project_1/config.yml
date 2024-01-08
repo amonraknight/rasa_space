@@ -4,7 +4,7 @@ recipe: default.v1
 
 # The assistant project unique identifier
 # This default value must be replaced with a unique assistant name within your deployment
-assistant_id: placeholder_default
+assistant_id: 20240108-110612-ebony-trap
 
 # Configuration for Rasa NLU.
 # https://rasa.com/docs/rasa/nlu/components/
@@ -35,6 +35,26 @@ pipeline:
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
+
+- name: WhitespaceTokenizer
+- name: RegexFeaturizer
+- name: LexicalSyntacticFeaturizer
+- name: CountVectorsFeaturizer
+- name: CountVectorsFeaturizer
+  analyzer: "char_wb"
+  min_ngram: 1
+  max_ngram: 4
+- name: DIETClassifier
+  epochs: 100
+- name: RegexEntityExtractor
+  case_sensitive: False
+  use_lookup_tables: True
+  use_regexes: False
+- name: EntitySynonymMapper
+- name: ResponseSelector
+  epochs: 100
+
+
 policies:
 # # No configuration for policies was provided. The following default policies were used to train your model.
 # # If you'd like to customize them, uncomment and adjust the policies.
@@ -48,3 +68,10 @@ policies:
 #     max_history: 5
 #     epochs: 100
 #     constrain_similarities: true
+
+- name: MemoizationPolicy
+- name: TEDPolicy
+  max_history: 5
+  epochs: 100
+  constrain_similarities: true
+- name: RulePolicy
