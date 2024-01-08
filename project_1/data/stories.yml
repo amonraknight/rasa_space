@@ -32,4 +32,6 @@ stories:
 - story: ask_to_create_processor
   steps:
   - intent: create_processor
+  - slot_was_set: 
+    - current_processor_name: PutCassandraRecord
   - action: utter_confirm

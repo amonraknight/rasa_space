@@ -31,7 +31,7 @@ responses:
   - text: "I am a bot, powered by Rasa."
   
   utter_confirm:
-  - text: "OK."
+  - text: "OK. I'm to create a {current_processor_name}..."
 
 entities:
   - nifi_processor
@@ -41,9 +41,10 @@ session_config:
   carry_over_slots_to_new_session: true
   
 slots:
-  nifi_processor_name: 
+  current_processor_name: 
     type: text
     influence_conversation: false
     mappings:
     - type: from_entity
       entity: nifi_processor
+      intent: create_processor
