@@ -93,6 +93,6 @@ nlu:
 - intent: create_processor
   examples: |
     - Create a [GetFile](nifi_processor) processor.
-    - Add one [EncryptContent](nifi_processor).
-    - Give me a [PutFile](nifi_processor).
-    - Please add a processor [GetSmbFile](nifi_processor).
+    - Add one [GetFile](nifi_processor).
+    - Give me a [GetFile](nifi_processor).
+    - Please add a processor [GetFile](nifi_processor).
