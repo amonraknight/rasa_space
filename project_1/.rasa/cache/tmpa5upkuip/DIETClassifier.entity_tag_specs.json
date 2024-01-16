@@ -1,0 +1,28 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-nifi_processor",
+      "2": "I-nifi_processor",
+      "3": "L-nifi_processor",
+      "4": "U-nifi_processor",
+      "5": "B-processor_name",
+      "6": "I-processor_name",
+      "7": "L-processor_name",
+      "8": "U-processor_name",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-nifi_processor": 1,
+      "I-nifi_processor": 2,
+      "L-nifi_processor": 3,
+      "U-nifi_processor": 4,
+      "B-processor_name": 5,
+      "I-processor_name": 6,
+      "L-processor_name": 7,
+      "U-processor_name": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]

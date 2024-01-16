@@ -3,6 +3,7 @@ version: "3.1"
 intents:
   - create_processor
   - info_processor_name
+  - info_upstream
 
 responses: 
   utter_creation_confirm:
@@ -11,8 +12,8 @@ responses:
   utter_ask_processor_setup_form_current_processor_name:
   - text: "How do you want to name this processor?"
   
-#  utter_ask_processor_setup_form_upstream:
-#  - text: "What is the name of the upstream processor?"
+  utter_ask_processor_setup_form_upstream_processor_name:
+  - text: "What is the name of the upstream processor?"
 
 #  utter_ask_processor_setup_form_downstream:
 #  - text: "What is the name of the downstream processor?"
@@ -40,8 +41,16 @@ slots:
       entity: processor_name
       conditions:
       - active_loop: processor_setup_form
+  upstream_processor_name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: processor_name
+      conditions:
+      - active_loop: processor_setup_form
 
 forms:
   processor_setup_form:
     required_slots:
       - current_processor_name
+      - upstream_processor_name

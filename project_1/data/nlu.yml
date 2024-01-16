@@ -16,15 +16,13 @@ nlu:
     - Name it [Upload_Result](processor_name).
     - [Insert_Data](processor_name) is the name.
 
-#- intent: info_upstream
-#  examples: |
-#    - The upstream is [Get_File_1](processor_name).
-#    - The parent is [Get_File_2](processor_name).
-#    - [Get_File_3](processor_name) is the upstream processor.
-#    - [Get_File_4](processor_name) is the parent.
-#    - [Add_Column_2](processor_name).
-#    - It is [Upload_Result](processor_name).
-#    - [Insert_Data](processor_name) is the name. 
+- intent: info_upstream
+  examples: |
+    - The upstream is [Get_File_1](processor_name).
+    - The parent is [Get_File_2](processor_name).
+    - [Get_File_3](processor_name) is the upstream processor.
+    - [Get_File_4](processor_name) is the parent.
+
 
 #- intent: info_downstream
 #  examples: |
