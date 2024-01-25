@@ -15,5 +15,6 @@ rules:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
-  - action: utter_creation_confirm
+#  - action: utter_creation_confirm
+  - action: action_nifi_create_processor
   

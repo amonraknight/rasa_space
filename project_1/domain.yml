@@ -54,3 +54,8 @@ forms:
     required_slots:
       - current_processor_name
       - upstream_processor_name
+
+
+actions:
+  - action_nifi_create_processor
+  
