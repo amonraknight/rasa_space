@@ -1,0 +1,20 @@
+version: "3.1"
+
+rules:  
+- rule: Activate processor_setup_form
+  steps:
+  - intent: create_processor
+  - action: processor_setup_form
+  - active_loop: processor_setup_form
+
+- rule: Submit processor_setup_form
+  condition:
+  - active_loop: processor_setup_form
+  steps:
+  - action: processor_setup_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+#  - action: utter_creation_confirm
+  - action: action_nifi_create_processor
+  

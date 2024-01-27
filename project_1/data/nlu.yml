@@ -1,0 +1,35 @@
+version: "3.1"
+
+nlu:
+- intent: create_processor
+  examples: |
+    - Create a [GetFile](nifi_processor) processor.
+    - Add one [GetFile](nifi_processor).
+    - Give me a [GetFile](nifi_processor).
+    - Please add a processor [GetFile](nifi_processor).
+    - I want to create a [GetFile](nifi_processor).
+
+- intent: info_processor_name
+  examples: |
+    - The processor name is [Get_File_1](processor_name).
+    - [Add_Column_2](processor_name).
+    - Name it [Upload_Result](processor_name).
+    - [Insert_Data](processor_name) is the name.
+
+- intent: info_upstream
+  examples: |
+    - The upstream is [Get_File_1](processor_name).
+    - The parent is [Get_File_2](processor_name).
+    - [Get_File_3](processor_name) is the upstream processor.
+    - [Get_File_4](processor_name) is the parent.
+
+
+#- intent: info_downstream
+#  examples: |
+#    - The downstream is [Get_File_1](processor_name).
+#    - The subsequent is [Get_File_2](processor_name).
+#    - [Get_File_3](processor_name) is the subsequent processor.
+#    - [Get_File_4](processor_name) is the subsequent.
+#    - [Add_Column_2](processor_name).
+#    - It is [Upload_Result](processor_name).
+#    - [Insert_Data](processor_name) is the name.
